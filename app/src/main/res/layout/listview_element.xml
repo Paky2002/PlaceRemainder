@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/primary"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!-- Aggiungi spazio vuoto che si espande -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_menu_info_details"
+        android:drawableTint="#FFFFFF"
+        android:drawableTintMode="multiply"
+        android:gravity="right"
+        />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:drawableLeft="@android:drawable/ic_menu_delete"
+        android:drawableTint="#FF0000"
+        android:drawableTintMode="multiply"
+        android:gravity="right"
+        />
+
+    />
+
+</LinearLayout>

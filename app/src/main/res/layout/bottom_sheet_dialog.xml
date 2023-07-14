@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/backgroundImageView_bottom_sheet"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Immagine rotonda con avatar -->
+    <ImageView
+        android:id="@+id/avatarImageView_bottom_sheet"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/avatar_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImageView_bottom_sheet"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImageView_bottom_sheet"
+
+        />
+
+    <!-- Testo del nome -->
+    <TextView
+        android:id="@+id/welcomeTextView_bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/primary"
+        android:textSize="29sp"
+        app:layout_constraintStart_toEndOf="@+id/avatarImageView_bottom_sheet"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImageView_bottom_sheet"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImageView_bottom_sheet"
+        android:layout_marginStart="15sp" />
+
+    <TextView
+        android:id="@+id/loc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/primary"
+        android:text="Località : "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/backgroundImageView_bottom_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15sp"
+        android:drawableLeft="@drawable/marker"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/primary_text"
+        />
+
+    <TextView
+        android:id="@+id/data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Data aggiunta : "
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/primary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/loc_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15sp"
+        android:drawableLeft="@drawable/calendar_"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/primary_text"
+        />
+
+    <TextView
+        android:id="@+id/ora_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Ora aggiunta : "
+        android:textSize="20sp"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/primary"
+        app:layout_constraintTop_toBottomOf="@id/data_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15sp"
+        android:drawableLeft="@drawable/clock"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/primary_text"
+        />
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Descrizione : "
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/ora_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="15sp"
+        android:drawableLeft="@drawable/description"
+        android:drawablePadding="10dp"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/primary"
+        android:drawableTint="@color/primary_text"
+        />
+
+    <Button
+        android:id="@+id/modifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="Modifica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_text"
+        app:backgroundTint="@color/primary_text"
+        android:textColor="#000000"
+        android:layout_margin="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
